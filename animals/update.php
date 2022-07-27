@@ -39,7 +39,7 @@ $animal = mysqli_fetch_array($res, MYSQLI_ASSOC);
 <body>
     <fieldset>
         <legend class='h2'>Update Animal</legend>
-        <form action="/actions/a_update.php" method="post" enctype="multipart/form-data">
+        <form action="../actions/a_update.php" method="post" enctype="multipart/form-data">
         <input type='hidden' name='id' value="<?php echo $animal['animalid'];?>"/>
             <table class='table'>
                 <tr>

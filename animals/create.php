@@ -34,7 +34,7 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
 <body>
     <fieldset>
         <legend class='h2'>Add Animal</legend>
-        <form action="/actions/a_create.php" method="post" enctype="multipart/form-data">
+        <form action="../actions/a_create.php" method="post" enctype="multipart/form-data">
             <table class='table'>
                 <tr>
                     <th>Name</th>

@@ -18,7 +18,7 @@ $tbody = ''; //this variable will hold the body for the table
 if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $tbody .= "<tr class ='align-middle'>
-            <td class = 'text-center d-flex justify-content-center'><img class='img-thumbnail' style = 'width: 10rem' src='/pictures/" . $row['image'] . "'</td>
+            <td class = 'text-center d-flex justify-content-center'><img class='img-thumbnail' style = 'width: 10rem' src='../pictures/" . $row['image'] . "'</td>
             <td class = 'text-center'>" .$row['name'] . "</td>
             <td class = 'text-center'>" .$row['species']."</td>
             <td class = 'text-center'>" .$row['gender']."</td>
@@ -28,9 +28,9 @@ if (mysqli_num_rows($result)  > 0) {
             <td class = 'text-center'>" .$row['color'] . "</td>
             <td class = 'text-center'>" .$row['familyfriendly'] . "</td>
             <td class = 'text-center'>" .$row['location'] . "</td>
-            <td class = 'text-center'><a class='btn btn-primary' href='/animals/update.php?id=" . $row['animalid'] . "'>Edit</a></td>
+            <td class = 'text-center'><a class='btn btn-primary' href='update.php?id=" . $row['animalid'] . "'>Edit</a></td>
             <td class = 'text-center'>
-                <form action='/actions/a_delete.php' method='post'>
+                <form action='../actions/a_delete.php' method='post'>
                      <input type='hidden' name='id' value='".$row['animalid'] ."'/>
                     <button class='btn btn-danger' type='submit'>Delete</button>
                 </form>
@@ -66,7 +66,7 @@ mysqli_close($connect);
 </head>
 
 <body>
-    <p class='h2'>Animals</p> <a href="/animals/create.php" class="btn btn-primary">Create Animal</a>
+    <p class='h2'>Animals</p> <a href="create.php" class="btn btn-primary">Create Animal</a>
         <table class='table table-hover'>
             <thead class='table-success'>
                 <tr>
